@@ -1,13 +1,12 @@
 #!/bin/bash
 
-echo "WELD_HOME: ${WELD_HOME?"Need to set WELD_HOME"}"
-
-# Should be done at WELD_HOME
 git clone https://github.com/weld-project/weld
-cd $WELD_HOME
-cargo build —-release
+cd weld
+export WELD_HOME=`pwd`
+cargo build
+cargo build --release
 cd python
-python setup.py develop
+sudo python setup.py develop
 
 # Download data.
 cd $WELD_HOME/examples/python/grizzly
