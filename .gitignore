@@ -3,3 +3,4 @@ weld/
 *.swp
 .DS_Store
 data/
+*.pyc
