@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/weld-project/weld
+git clone -b parallel_encoder https://github.com/deepakn94/weld
 cd weld
 export WELD_HOME=`pwd`
 cargo build
